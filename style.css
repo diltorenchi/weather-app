@@ -172,7 +172,7 @@ body{
 }
 
 .wind{
-    margin-left : 480px;
+    margin-left : 500px;
     position: absolute;
 }
 .wintext{
@@ -240,7 +240,7 @@ body{
 } 
 
 #clock{
-    margin-left: -90px;
+    margin-left: -50px;
     margin-top: 30px;
     font-size:30px;
 }
