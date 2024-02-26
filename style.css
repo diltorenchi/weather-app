@@ -16,8 +16,7 @@ body{
    justify-content: center;
    background-image: url('https://img.freepik.com/free-photo/cloud-sky-twilight-times_74190-4017.jpg');
     background-size:cover;
-    overflow: scroll;
-
+   
    
    
    
@@ -38,7 +37,8 @@ body{
     padding: 28px 32px;
     
    
-     
+    overflow: scroll;
+
      overflow-x: hidden;
       
     border-radius: 18px;
@@ -172,12 +172,12 @@ body{
 }
 
 .wind{
-    margin-left : 680px;
+    margin-left : 580px;
     position: absolute;
 }
 .wintext{
     position: absolute;
-  margin-left: 720px;
+  margin-left: 620px;
   margin-top: 30px;
 }
 .windtext{
@@ -218,9 +218,9 @@ body{
     width: 100%;
     text-align: center;
     margin-top: 30px; 
-    /* scale: 0;
+    scale: 0;
     opacity: 0;
-    display: none;  */
+    display: none; 
 }
 
 .not_found img{
@@ -240,12 +240,12 @@ body{
 } 
 
 #clock{
-    margin-left: -230px;
+    margin-left: -130px;
     margin-top: 30px;
     font-size:30px;
 }
 #date1{
-    margin-left: -538px;
+    margin-left: -438px;
     margin-top: 70px;
     font-size: 20px;
     margin-bottom: 0px;
