@@ -5,6 +5,7 @@ const weatherbody=document.querySelector('.weather_body')
 const weatherdetails = document.querySelector('.weather_details')
 const weatherimage = document.querySelector(".weathericon")
 const error = document.querySelector('.not_found')
+
 const time = new Date()
 const months = [
     "January",
@@ -23,6 +24,8 @@ const months = [
   const daysOfWeek = [
     'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
   ];
+//   const myDiv = document.getElementById('myDiv');
+const screenWidth = window.innerWidth;
 const search = async()=>{
 
 
@@ -35,6 +38,7 @@ const search = async()=>{
 
        const response1 = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=dubai&appid=69ee4983a6505a7639d8661aaf38dab7&units=metric`)
        const response2 = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=london&appid=69ee4983a6505a7639d8661aaf38dab7&units=metric`)
+       const screenWidth = window.innerWidth;
     //    console.log(response2);
         // console.log(response);
        
@@ -43,7 +47,7 @@ const search = async()=>{
 
 
             if(weather.cod === "404"){
-                container.style.height = '500px';
+                container.style.height = '600px';
                 weatherbody.style.display= 'none';
                 weatherdetails.style.display = 'none';
                 error.style.display = 'block';
@@ -72,6 +76,10 @@ const search = async()=>{
 
              let feel =Math.floor(weather.main.feels_like)
 
+             //presure
+
+             let pre = weather.main.pressure
+
              //humidity
 
              let hum = weather.main.humidity
@@ -89,30 +97,30 @@ const search = async()=>{
 
             
 
-            if(weather.weather[0].main=="Clouds"){
+            // if(weather.weather[0].main=="Clouds"){
 
-             weatherimage.src="./images/clouds.png"
+            //  weatherimage.src="./images/clouds.png"
 
-             }else if(weather.weather[0].main=="Clear")
-             {
-                weatherimage.src="./images/clear.png"
-             }
-             else if(weather.weather[0].main=="Rain")
-             {
-                weatherimage.src="./images/rain.png"
-             }
-             else if(weather.weather[0].main=="Drizzle")
-             {
-                weatherimage.src="./images/drizzle.png"
-             }
-             else if(weather.weather[0].main=="Mist")
-             {
-                weatherimage.src="./images/mist.png"
-             }
-             else if(weather.weather[0].main=="Snow")
-             {
-                weatherimage.src="./images/snow.png"
-             }
+            //  }else if(weather.weather[0].main=="Clear")
+            //  {
+            //     weatherimage.src="./images/clear.png"
+            //  }
+            //  else if(weather.weather[0].main=="Rain")
+            //  {
+            //     weatherimage.src="./images/rain.png"
+            //  }
+            //  else if(weather.weather[0].main=="Drizzle")
+            //  {
+            //     weatherimage.src="./images/drizzle.png"
+            //  }
+            //  else if(weather.weather[0].main=="Mist")
+            //  {
+            //     weatherimage.src="./images/mist.png"
+            //  }
+            //  else if(weather.weather[0].main=="Snow")
+            //  {
+            //     weatherimage.src="./images/snow.png"
+            //  }
             
 
         //    console.log(weatherimage);
@@ -136,7 +144,30 @@ const search = async()=>{
             weatherdetails.style.display = '';
             weatherbody.classList.add('fadeIn');
             weatherdetails.classList.add('fadeIn');
-            container.style.height = '710px';
+            // container.style.height = '710px';
+
+            if (screenWidth <= 767) {
+                // container.style.height = '710px'; // Set height for screens wider than 768px
+                // // container.style.width = '900px';
+                // container.style.marginLeft = '-0px';
+                // container.style.marginRight = '200px';
+                container.style.height = '515px'; // Set height for screens narrower than 768px
+                // container.style.width - '400px'
+                container.style.marginLeft = '-147px';
+                container.style.marginRight = '93px';
+
+            
+              } else {
+                // container.style.height = '515px'; // Set height for screens narrower than 768px
+                // // container.style.width - '400px'
+                // container.style.marginLeft = '-147px';
+                // container.style.marginRight = '93px';
+                container.style.height = '710px'; // Set height for screens wider than 768px
+                // container.style.width = '900px';
+                container.style.marginLeft = '-0px';
+                container.style.marginRight = '200px';
+              }
+            
 
 
             response1.json().then((weatherdubai)=>{
@@ -166,12 +197,22 @@ const search = async()=>{
                  <p class="temperature">${temp}°C</p>
                  
                  <p class="weatherplace">${name}</p>
-    
+                 <div class="feelslike">
+                            <i class="fa-solid fa-temperature-low"></i>
+                        </div>
+                        <div class="feeltext">
+                            <span>&nbsp; ${pre} mb</span>
+                            <!-- <p class="humtext">Humidity</p> -->
+            
+                        </div>
+                        <div class="presure">
+                            <h2>Feels like : ${feel}°C</h2>
+                        </div>
                 
-                 <img class="weathericon" src="images/clouds.png" alt="">
                  
                  
-                 <p class="description">${desc}</p>
+                 
+                
      
                 </div>
     
@@ -206,13 +247,13 @@ const search = async()=>{
                         <div class="card">
                             <h2>Dubai</h2>
                             <p class="temperature">${temp1}°C</p>
-                                <i class="fa-solid fa-temperature-low"></i>
+                                <i class="fa-solid fa-temperature-three-quarters"></i>
                                 <img class="img1" src="images/clear.png" alt=""> 
                         </div>
                         <div class="card">
                             <h2>London</h2>
                 <img class="" src="images/rain.png" alt="">
-                <i class="fa-solid fa-temperature-low"></i>
+                <i class="fa-solid fa-temperature-three-quarters"></i>
                 
                     <p class="temperature">${temp2}°C</p>
                         </div>

@@ -25,7 +25,7 @@ body{
     font-size: 40px;
     margin-left: 60px;
     color: black;
-    margin-bottom: 700px;
+    margin-bottom: 800px;
     
 }
 
@@ -38,7 +38,6 @@ body{
     
    
     overflow: scroll;
-
      overflow-x: hidden;
       
     border-radius: 18px;
@@ -48,9 +47,9 @@ body{
   
 }
 
-::-webkit-scrollbar{ /* pseudo class to design the scroll bar */
+ ::-webkit-scrollbar{ /* pseudo class to design the scroll bar */
     display: none;
-}
+} 
 
 
 
@@ -104,65 +103,99 @@ body{
 }
 
 .weather_body{
-    text-align: center;
+    text-align: end;
 }
 
-.weather_body img{
+/* .weather_body img{
     width: 25%;
-    
-    margin-bottom: 40px;
-}
+    position: absolute;
+    margin-bottom: -1000px;
+    align-items: end;
+    justify-content: end ;
+    display: flex;
+} */
 .weather_body .weatherplace{
-   text-align: center;
+   text-align: start    ;
    font-size: 4rem;
    font-weight: 500;
    margin-bottom: 10px;
 }
 
 .weather_body .temperature{
-    position: relative;
+    
     color: #06283D;
-    font-size: 4rem;
+    font-size: 8rem;
     font-weight: 800;
-    margin-top: 60px;
-    margin-left: -16px;
+    margin-top: 50px;
+    margin-right: 1000px;
 }
 
 
-
+#loc{
+    margin-top: 2px;
+}
 .weather_body .temperature span{
-    position: absolute;
-    margin-left: 4px;
-    font-size: 1.5rem;
+    
+    margin-left: 18px;
+    margin-top: 3800px;
+    font-size: 2rem;
 }
 
-.weather_body .description{
+/* .weather_body .description{
     color: #06283D;
     font-size: 22px;
     font-weight: 500;
     text-transform: capitalize;
     
 
-}
+} */
 
 .weather_details{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     margin-top: 0px;
 }
 
-.weather_details .humidity , .weather_details .wind{
+.weather_details .humidity , .weather_details .feelslike, .weather_details .wind {
         display: flex;
        align-items: center;
         width: 40%;
         height: 100px;
 }
+.feelslike{
+    color: #06283D;
+    font-size: 1.5rem;
+    margin-right: 910px;
+    margin-bottom:-105px;
+    font-weight: 400;
+    
 
+}
+.feeltext{
+    position: absolute;
+    margin-left: 310px;
+    margin-top: 70px;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+}
+.presure{
+    position: absolute;
+    margin-top: 155px;
+    margin-left: 285px;
+    
+}
+.presure h2{
+    font-size: 24px;
+}
+.humidity{
+    margin-top: 35px;
+}
 .humitext{
     position: absolute;
     margin-left: 60px;
-    margin-top: 33px;
+    margin-top: 63px;
 }
                
 .humtext{
@@ -172,13 +205,14 @@ body{
 }
 
 .wind{
-    margin-left : 500px;
+    margin-left : 20px;
+    margin-top: 120px;
     position: absolute;
 }
 .wintext{
     position: absolute;
-  margin-left: 550px;
-  margin-top: 30px;
+  margin-left: 60px;
+  margin-top: 145px;
 }
 .windtext{
     margin-top:-5px;
@@ -217,7 +251,7 @@ body{
  .not_found{
     width: 100%;
     text-align: center;
-    margin-top: 30px; 
+    margin-top: 0px; 
     scale: 0;
     opacity: 0;
     display: none; 
@@ -234,22 +268,28 @@ body{
     margin-top: 12px;
 }
 
-  .weather_details ,.weather_body{
-    scale: 1;
-    opacity: 1;
-} 
+  /* .weather_details ,.weather_body{
+    scale: 0;
+    opacity: 0;
+}  */
 
 #clock{
-    margin-left: -200px;
-    margin-top: 30px;
+    position: absolute;
+    margin-left: 470px;
+    margin-top: -160px;
     font-size:30px;
 }
 #date1{
-    margin-left: -438px;
-    margin-top: 70px;
+    margin-left: 468px;
+    margin-top: -200px;
     font-size: 20px;
     margin-bottom: 0px;
 
+}
+.video{
+    width:100%;
+    height: 240;
+    margin-top: 40px;
 }
 
 
@@ -281,13 +321,14 @@ body{
 .card{
     width: 90%;
     height: 100px;
+    margin-top: -80px;
     
 }
 .card i{
     color: #06283D;
     position: absolute;
     font-size: 24px;
-    margin-top: 130px;
+    margin-top: 180px;
     padding-left: 22px;
 
 }
@@ -297,7 +338,7 @@ body{
     color: #06283D;
     font-size: 22px;
     font-weight: 500;
-    margin-top: 127px;
+    margin-top: 177px;
     padding-left: 52px;
    
     
@@ -324,3 +365,168 @@ body{
 .sea{
     margin-top: 100px;
 }
+
+@media only screen and (max-width: 768px) {
+
+    .fa-solid{
+        margin-right: 40px;
+    }
+    /* .suggestion{
+        display: none;
+    } */
+    .card h2{
+    
+    
+        font-size: 24px;
+        font-weight: 500;
+        text-transform: uppercase;
+        padding-left: 22px; 
+        
+    
+    
+    }
+    .card{
+        width: 90%;
+        height: 100px;
+        margin-top: -80px;
+        
+    }
+    .card i{
+        color: #06283D;
+        position: absolute;
+        font-size: 24px;
+        margin-top: 70px;
+        padding-left: 10px;
+    
+    }
+    
+    .card p{
+        position: absolute;
+        color: #06283D;
+        font-size: 22px;
+        font-weight: 500;
+        margin-top: 67px;
+        padding-left: 28px;
+       
+        
+        
+    
+    }
+    .card img{
+        
+        width:55%;
+        margin-left: 69px;
+        /* align-items: end; */
+        
+        
+    }
+
+    .weather_body .weatherplace{
+        text-align: start    ;
+        margin-left: 10px;
+        font-size: 3rem;
+        font-weight: 500;
+        margin-bottom: 10px;
+     }
+     .feelslike{
+        color: #06283D;
+        font-size: 1.5rem;
+        margin-right: 160px;
+        margin-bottom:0px;
+        font-weight: 400;
+        
+    
+    }
+    .feeltext{
+        position: absolute;
+        margin-left: 330px;
+        margin-top: -35px;
+        font-size: 1.4rem;
+        font-weight: 500;
+    
+    }
+    .presure{
+        position: absolute;
+        margin-top: 25px;
+        margin-left: 290px;
+        
+    }
+    .presure h2{
+        font-size: 24px;
+    }
+    #clock{
+        position: absolute;
+        margin-left: -20px;
+        margin-top: 220px;
+        font-size:30px;
+        display: none;
+    }
+    #date1{
+        margin-left: -60px;
+        margin-top: 300px;
+        font-size: 20px;
+        margin-bottom: 0px;
+        display: none;
+    
+    }
+    .container{
+        margin-left: -127px;
+        margin-right: 100px;
+        
+    }
+    .humidity{
+        margin-top: -70px;
+    }
+    .humitext{
+        position: absolute;
+        margin-left: 60px;
+        margin-top: -43px;
+    }
+                   
+    .humtext{
+        position:absolute;
+        margin-left: 0px;
+        margin-top: -5px;
+    }
+    
+    .wind{
+        margin-left : 20px;
+        margin-top:  -10px;
+        position: absolute;
+    }
+    .wintext{
+        position: absolute;
+      margin-left: 60px;
+      margin-top: 15px;
+    }
+    .windtext{
+        margin-top:-5px;
+        
+    }
+    .heading{
+        font-size: 40px;
+        margin-left: 60px;
+        color: black;
+        margin-bottom: 600px;
+        
+    }
+    
+    }
+    @media (min-width: 768px) {
+        .container {
+          height: 710px; /* Adjust height for screens wider than 768px */
+          width: 400px;
+          margin-left: -0px;
+          margin-right: 200px;
+        }
+      }
+    
+      @media (max-width: 767px) {
+        .container {
+          height: 450px; /* Adjust height for screens narrower than 768px */
+          width: 400px;
+          margin-left: -147px;
+          margin-right: 93px;
+        }
+      }
+  

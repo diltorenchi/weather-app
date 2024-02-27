@@ -14,16 +14,17 @@
         <h1 class="heading">SKYESQUE.</h1>
     
     </nav>
-    <div class="container" style="margin-left: 150px; margin-right: 400px; " >
+    <div id="mydiv" class="container" style="    margin-left: -0px;
+    margin-right: 200px; " >
      
            <div class="searchbox">
-            <i class="fa-solid fa-location-dot"></i>
+            <i id="loc" class="fa-solid fa-location-dot"></i>
             <input id="cname"  type="text" placeholder="Enter your location">
            
             <button onclick="search()" class="fa-solid fa-magnifying-glass"></button>
            </div>
 
-           
+           <!-- <video loop muted autoplay class="video" src="./images/vecteezy_2d-meteo-concept_36930084.mp4"></video> -->
 
           <div id="result">
                <div class="not_found">
@@ -33,19 +34,23 @@
                </div>
     
     
-         
+       
                  
                        <div  class="weather_body">
                         
-                        <p class="temperature">22°C</p>
-                        <p class="feel">feels like:°C</p>
-                        <p class="weatherplace">Kochi</p>
+                        <p class="temperature">0°C</p>
+                        
+                        <p class="weatherplace"></p>
+
+                        <p class="feelslike">
+                            <i class="fa-solid fa-temperature-low"></i></p>
+                        
         
                        
-                        <img class="weathericon" src="images/clouds.png" alt="">
+                        <!-- <img class="weathericon" src="images/clouds.png" alt=""> -->
                         
                         
-                        <p class="description">broken clouds</p>
+                        <!-- <p class="description">broken clouds</p> -->
             
                        </div>
         
@@ -54,21 +59,33 @@
                             <i class="fa-solid fa-water"></i>
                         </div>
                         <div class="humitext">
-                            <span>20%</span>
+                            <span>0%</span>
                             <p class="humtext">Humidity</p>
             
                         </div>
-                        <div class="time">
+                        <!-- <div class="feelslike">
+                            <i class="fa-solid fa-temperature-low"></i>
+                        </div> -->
+                        <div class="feeltext">
+                            <span>&nbsp;    0°C</span>
+                            <!-- <p class="humtext">Humidity</p> -->
+            
+                        </div>
+                        <div class="presure">
+                            <h2>Feels like : 0°C</h2>
+                        </div>
+                       
+                        <!-- <div class="time">
                             <p id="clock">00:00</p>
                         </div>
                         <div class="date">
                            <P id="date1">00:00:00</P>
-                        </div>
+                        </div> -->
                         <div class="wind">
                             <i id="windlogo" class="fa-solid fa-wind"></i>
                         </div>
                         <div class="wintext">
-                            <span>2Km/hr</span>
+                            <span>0Km/hr</span>
                             <p class="windtext">Real Time Wind</p>
             
                         </div>
@@ -98,7 +115,9 @@
                   
              
               </div>
+              
           </div>
+          
           
     </div>
 </body>
